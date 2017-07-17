@@ -1,0 +1,42 @@
+{
+  "description": "share the internet",
+  "name": "bookthis",
+  "manifest_version": 2,
+  "version": "0.0.1",
+
+  "background": {
+  "page": "background.html"
+  },
+  "options_ui": {
+      "page": "options.html"
+   },
+
+  "permissions": ["<all_urls>", "tabs", "storage"],
+
+  "browser_action": {
+      "default_icon": "icons/pazzo.png",
+      "default_title": "Send it!"
+  },
+
+    "commands": {
+      "open-inbox": {
+        "suggested_key": {
+          "default": "Alt+Shift+U"
+        },
+        "description": "Send a 'open-inbox' event to the extension"
+      },
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Alt+Shift+Y"
+        },
+        "description": "Sends the current tab"
+      }
+    },
+
+    "applications": {
+      "gecko": {
+        "id": "synchropazzo@gmail.com"
+      }
+    }
+
+}
